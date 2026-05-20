@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import { useIntent } from "@/context/IntentContext";
 import { getTestimonialsForIntent } from "@/lib/intent-content";
 import { Stars } from "@/components/ui/Stars";
+import { scrollRevealViewport } from "@/lib/motion-viewport";
 
 export function Testimonials() {
   const { intent } = useIntent();
@@ -25,9 +26,9 @@ export function Testimonials() {
           {testimonials.map((t, i) => (
             <motion.blockquote
               key={t.author}
-              initial={{ opacity: 0, y: 16 }}
+              initial={{ opacity: 1, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-40px" }}
+              viewport={scrollRevealViewport}
               transition={{ duration: 0.4, delay: i * 0.05 }}
               className="testimonial-card flex flex-col rounded-2xl border border-black/[0.05] bg-[#fafafa] p-8 shadow-[0_2px_16px_rgba(0,0,0,0.03)]"
             >

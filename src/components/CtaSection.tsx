@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import { Button } from "@/components/ui/Button";
 import { useIntentContent } from "@/hooks/useIntentContent";
 import { scrollToForm } from "@/lib/scroll";
+import { scrollRevealViewport } from "@/lib/motion-viewport";
 
 export function CtaSection() {
   const { cta } = useIntentContent();
@@ -21,9 +22,9 @@ export function CtaSection() {
       <div className="relative mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
         <motion.div
           key={cta.title}
-          initial={{ opacity: 0, y: 16 }}
+          initial={{ opacity: 1, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={scrollRevealViewport}
         >
           <h2 className="font-pp text-2xl text-white sm:text-3xl lg:text-4xl">
             {cta.title}

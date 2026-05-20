@@ -6,6 +6,7 @@ import { ASSETS } from "@/lib/constants";
 import { Button } from "@/components/ui/Button";
 import { useIntentContent } from "@/hooks/useIntentContent";
 import { scrollToForm } from "@/lib/scroll";
+import { scrollRevealViewport } from "@/lib/motion-viewport";
 
 export function Steps() {
   const { steps, intent } = useIntentContent();
@@ -15,9 +16,9 @@ export function Steps() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
+            initial={{ opacity: 1, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            viewport={scrollRevealViewport}
             className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.12)]"
           >
             <Image
@@ -37,9 +38,9 @@ export function Steps() {
               {steps.items.map((step, index) => (
                 <motion.li
                   key={step.title}
-                  initial={{ opacity: 0, x: 12 }}
+                  initial={{ opacity: 1, x: 12 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
+                  viewport={scrollRevealViewport}
                   transition={{ delay: index * 0.04 }}
                   className="step-item flex gap-4"
                 >

@@ -1,3 +1,5 @@
+import { publicAsset } from "@/lib/asset-path";
+
 export const ASSETS = {
   logo: "https://irp.cdn-website.com/69b9912a/dms3rep/multi/Logo+-+Stephane+Bisson.png",
   logoSmall:
@@ -5,14 +7,13 @@ export const ASSETS = {
   /**
    * Photo du hero — remplacer le fichier :
    * public/images/hero.jpg
-   * (même nom, ou mettre à jour ce chemin)
    */
-  heroImage: "/images/hero.jpg",
+  heroImage: publicAsset("/images/hero.jpg"),
   /**
-   * Photo derrière le formulaire (section 2) — remplacer :
+   * Photo derrière le formulaire — remplacer :
    * public/images/form-background.jpg
    */
-  formBackground: "/images/form-background.jpg",
+  formBackground: publicAsset("/images/form-background.jpg"),
   /** Ancienne vidéo du site source (non utilisée) */
   heroVideo:
     "https://vid.cdn-website.com/69b9912a/videos/xHa1Bc1BTl6Bepto3XFR_Vendre-propriete-gatineau-v.mp4",

@@ -10,11 +10,10 @@ import { Testimonials } from "@/components/Testimonials";
 import { Steps } from "@/components/Steps";
 import { CtaSection } from "@/components/CtaSection";
 import { Footer } from "@/components/Footer";
-import { ScrollAnimations } from "@/components/ScrollAnimations";
 
 export default function Home() {
   return (
-    <ScrollAnimations>
+    <>
       <ContactBar />
       <Header />
       <main>
@@ -29,6 +28,6 @@ export default function Home() {
         <CtaSection />
       </main>
       <Footer />
-    </ScrollAnimations>
+    </>
   );
 }

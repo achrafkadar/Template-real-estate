@@ -121,8 +121,18 @@ export const SITE_CONTENT = {
       intent: "buy",
     },
     {
+      text: "Premier achat immobilier pour nous : l'équipe a tout expliqué clairement, sans pression. Nous avons trouvé notre maison à Aylmer en quelques semaines. Expérience exceptionnelle.",
+      author: "Nadia Chartrand, Aylmer",
+      intent: "buy",
+    },
+    {
       text: "Vente de notre duplex réalisée au-dessus de nos attentes. L'équipe a su mettre en valeur chaque atout du bien. Je recommande sans hésiter.",
       author: "Pierre Desjardins, Hull",
+      intent: "sell",
+    },
+    {
+      text: "Courtier à l'écoute et très structuré. Notre bungalow à Gatineau s'est vendu rapidement, au prix demandé. Communication constante du début à la fin.",
+      author: "Jean-François Morin, Gatineau",
       intent: "sell",
     },
   ] as Testimonial[],

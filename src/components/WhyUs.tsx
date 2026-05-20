@@ -2,6 +2,7 @@
 
 import { motion } from "motion/react";
 import { useIntentContent } from "@/hooks/useIntentContent";
+import { scrollRevealViewport } from "@/lib/motion-viewport";
 
 export function WhyUs() {
   const { whyUs } = useIntentContent();
@@ -11,9 +12,9 @@ export function WhyUs() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.h2
           key={whyUs.title}
-          initial={{ opacity: 0, y: 16 }}
+          initial={{ opacity: 1, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={scrollRevealViewport}
           className="font-pp text-center text-2xl text-dark sm:text-3xl lg:text-4xl"
         >
           {whyUs.title}
@@ -23,9 +24,9 @@ export function WhyUs() {
           {whyUs.items.map((item, i) => (
             <motion.article
               key={`${whyUs.title}-${item.title}`}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 1, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-40px" }}
+              viewport={scrollRevealViewport}
               transition={{ duration: 0.45, delay: i * 0.06 }}
               className="why-card group rounded-2xl border border-black/[0.06] bg-white p-8 shadow-[0_4px_24px_rgba(0,0,0,0.04)] transition-shadow duration-300 hover:shadow-[0_12px_40px_rgba(193,53,73,0.08)]"
             >

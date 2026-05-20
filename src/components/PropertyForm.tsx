@@ -115,7 +115,7 @@ export function PropertyForm() {
 
         <div className="dmform-red-field">
           <label htmlFor="propertyType">Type de propriété</label>
-          <select id="propertyType" name="propertyType" defaultValue="">
+          <select id="propertyType" name="propertyType" defaultValue="" required>
             <option value="" disabled hidden />
             {PROPERTY_TYPES.map((type) => (
               <option key={type} value={type}>

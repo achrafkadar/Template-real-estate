@@ -11,7 +11,7 @@ const compat = new FlatCompat({
 
 const eslintConfig = [
   {
-    ignores: ["**/._*", ".DS_Store"],
+    ignores: ["**/._*", ".DS_Store", ".next/**", "out/**", "node_modules/**"],
   },
   ...compat.extends("next/core-web-vitals", "next/typescript"),
 ];

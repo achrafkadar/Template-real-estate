@@ -30,6 +30,7 @@ jobs:
       - run: npm run build
         env:
           BASE_PATH: /Template-real-estate
+          NEXT_PUBLIC_BASE_PATH: /Template-real-estate
           NEXT_PUBLIC_SITE_URL: https://achrafkadar.github.io/Template-real-estate
 
       - uses: actions/upload-pages-artifact@v3

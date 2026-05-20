@@ -2,6 +2,7 @@
 
 import { motion } from "motion/react";
 import { useIntentContent } from "@/hooks/useIntentContent";
+import { scrollRevealViewport } from "@/lib/motion-viewport";
 
 export function Stats() {
   const { stats } = useIntentContent();
@@ -12,9 +13,9 @@ export function Stats() {
         {stats.map((stat, i) => (
           <motion.div
             key={stat.title}
-            initial={{ opacity: 0, y: 16 }}
+            initial={{ opacity: 1, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={scrollRevealViewport}
             transition={{ delay: i * 0.08 }}
             className="stat-item border-white/10 text-center sm:border-l sm:px-6 sm:first:border-l-0"
           >
